@@ -4,6 +4,7 @@ const path = require('path');
 const Discord = require('discord.js');
 
 const { dbConnection } = require('./config_database');
+const keepAlive = require('./server');
 const Role = require('./models/role');
 const Voice = require('./models/voice');
 
@@ -206,5 +207,10 @@ client.on('message', async(message) =>
         message.channel.send('Internal error, check logs for more info.');
     }
 });
+
+if(process.env.PRODUCTION == 1)
+{
+    keepAlive();
+}
 
 client.login(process.env.TOKEN);
