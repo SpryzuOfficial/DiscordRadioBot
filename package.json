@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app"
   },
   "keywords": [],
   "author": "",
@@ -13,6 +13,7 @@
     "@discordjs/opus": "github:discordjs/opus",
     "discord.js": "12.2",
     "dotenv": "^10.0.0",
+    "express": "^4.17.2",
     "ffmpeg": "^0.0.4",
     "ffmpeg-static": "^4.4.1",
     "mongoose": "^6.1.8",

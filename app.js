@@ -184,6 +184,7 @@ client.on('message', async(message) =>
                             dispatcher.on("end", (end) =>
                             {
                                 voiceChannel.leave();
+                                message.channel.send('Out');
                             });
                         }).catch(err => console.log(err));
                     });
